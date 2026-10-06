@@ -6,4 +6,4 @@ Kein Build-Schritt: `index.html`, `styles.css` und `assets/` lassen sich direkt 
 Lokal ansehen: `python3 -m http.server` und http://localhost:8000 öffnen.
 
 Platzhalter, die noch befüllt werden müssen, sind im HTML mit `TODO` markiert
-(aktuell nur die Datenschutzerklärung).
+(Datenschutzerklärung sowie Daten im Lebenslauf).

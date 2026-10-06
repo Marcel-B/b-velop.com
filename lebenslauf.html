@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lebenslauf · b-velop</title>
+  <meta name="robots" content="noindex">
+  <meta name="description" content="b-velop – freiberufliche Softwareentwicklung von Marcel Benders. Individuelle Software, Web- und Backend-Entwicklung, Beratung.">
+  <meta name="theme-color" content="#557AE3">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <nav class="nav" aria-label="Hauptnavigation">
+        <a href="index.html#leistungen">Leistungen</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="index.html#referenz">Referenz</a>
+        <a href="lebenslauf.html">Lebenslauf</a>
+        <a href="index.html#kontakt">Kontakt</a>
+      </nav>
+      <a href="index.html#top" class="brand" aria-label="b-velop Startseite">
+        <span class="brand-name">b-velop</span>
+        <span class="brand-sub">Beratung &amp; Softwareentwicklung <b>&lt;/&gt;</b> Full Stack</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="cv">
+    <div class="container">
+      <div class="cv-head">
+        <div>
+          <h1>Marcel Benders</h1>
+          <p class="cv-role">Freelance Softwareentwickler · UI, Microfrontends &amp; BFF</p>
+        </div>
+        <button class="btn btn-print no-print" onclick="window.print()">Als PDF speichern</button>
+      </div>
+      <address class="cv-contact">
+        Krefeld ·
+        <a href="mailto:marcel.benders@b-velop.com">marcel.benders@b-velop.com</a> ·
+        <a href="tel:+4915202394104">+49 152 02 394 104</a> ·
+        <a href="https://github.com/Marcel-B">github.com/Marcel-B</a>
+      </address>
+
+      <h2><span>{</span> Profil <span>}</span></h2>
+      <p>
+        Freiberuflicher Softwareentwickler mit Schwerpunkt auf UI-Entwicklung, Microfrontend-Architekturen
+        und Backends for Frontends. Ich entwickle moderne Oberflächen mit Vue.js und React in TypeScript
+        und die passenden BFF-Schichten mit ASP.NET Core.
+      </p>
+
+      <h2><span>{</span> Kenntnisse <span>}</span></h2>
+      <div class="cv-entry">
+        <div class="cv-when">Frontend</div>
+        <ul class="tags"><li>Microfrontends</li><li>Vue.js</li><li>React</li><li>TypeScript</li><li>Aurelia</li></ul>
+      </div>
+      <div class="cv-entry">
+        <div class="cv-when">BFF &amp; Backend</div>
+        <ul class="tags"><li>Backend for Frontend</li><li>C#</li><li>ASP.NET Core</li><li>Microservices</li><li>SQL</li></ul>
+      </div>
+      <div class="cv-entry">
+        <div class="cv-when">Delivery</div>
+        <ul class="tags"><li>CI/CD</li><li>Azure DevOps</li><li>Docker</li><li>Testing</li></ul>
+      </div>
+
+      <h2><span>{</span> Projekte <span>}</span></h2>
+      <div class="cv-entry">
+        <!-- TODO: Zeitraum eintragen -->
+        <div class="cv-when"><span class="todo">MM/JJJJ – heute</span></div>
+        <div>
+          <h3>CRM-System · Kunde auf Wunsch anonym</h3>
+          <ul>
+            <li>Neuentwicklung eines CRM-Systems</li>
+            <li>Migration der Oberfläche von Aurelia auf Vue.js</li>
+            <li>Umstellung der Architektur auf Microfrontends</li>
+          </ul>
+          <ul class="tags"><li>Vue.js</li><li>Aurelia</li><li>Microfrontends</li><li>TypeScript</li></ul>
+        </div>
+      </div>
+
+      <!-- TODO: Berufserfahrung, Ausbildung und Sprachen ergänzen -->
+      <h2><span>{</span> Berufserfahrung <span>}</span></h2>
+      <div class="cv-entry">
+        <div class="cv-when"><span class="todo">MM/JJJJ – heute</span></div>
+        <div><h3>Freiberuflicher Softwareentwickler · b-velop</h3></div>
+      </div>
+      <div class="cv-entry">
+        <div class="cv-when"><span class="todo">MM/JJJJ – MM/JJJJ</span></div>
+        <div><h3><span class="todo">Position · Arbeitgeber</span></h3></div>
+      </div>
+
+      <h2><span>{</span> Ausbildung <span>}</span></h2>
+      <div class="cv-entry">
+        <div class="cv-when"><span class="todo">JJJJ – JJJJ</span></div>
+        <div><h3><span class="todo">Abschluss · Hochschule/Schule</span></h3></div>
+      </div>
+
+      <h2><span>{</span> Sprachen <span>}</span></h2>
+      <div class="cv-entry">
+        <div class="cv-when">Deutsch</div>
+        <div><p>Muttersprache</p></div>
+      </div>
+      <div class="cv-entry">
+        <div class="cv-when">Englisch</div>
+        <div><p><span class="todo">Niveau</span></p></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> <b>&lt;/&gt;</b> b-velop</p>
+      <nav aria-label="Rechtliches">
+        <a href="https://github.com/Marcel-B" rel="noopener" target="_blank">GitHub</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
