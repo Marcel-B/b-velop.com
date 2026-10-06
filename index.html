@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>b-velop · Softwareentwicklung</title>
+  <meta name="description" content="b-velop – freiberufliche Softwareentwicklung von Marcel Benders. Microfrontends, UI-Entwicklung mit Vue und React, Backend for Frontend.">
+  <meta name="theme-color" content="#557AE3">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <nav class="nav" aria-label="Hauptnavigation">
+        <a href="#leistungen">Leistungen</a>
+        <a href="#skills">Skills</a>
+        <a href="#referenz">Referenz</a>
+        <a href="lebenslauf.html">Lebenslauf</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+      <a href="#top" class="brand" aria-label="b-velop Startseite">
+        <span class="brand-name">b-velop</span>
+        <span class="brand-sub">Beratung &amp; Softwareentwicklung <b>&lt;/&gt;</b> Full Stack</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <p class="prompt"><span class="caret">READY.</span></p>
+        <h1>Frontends, die mitwachsen.</h1>
+        <p class="lead">
+          Ich bin Marcel Benders, freiberuflicher Softwareentwickler mit Schwerpunkt auf
+          UI-Entwicklung und Microfrontends. Mit b-velop baue ich moderne Oberflächen in Vue und React
+          und die passenden Backends for Frontends, damit mehrere Teams unabhängig an einer Anwendung arbeiten können.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#kontakt">Projekt anfragen</a>
+          <a class="btn btn-ghost" href="lebenslauf.html">Lebenslauf</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Über b-velop -->
+    <section class="section" id="ueber">
+      <div class="container split">
+        <div>
+          <h2 class="section-title"><span>{</span> Über b-velop <span>}</span></h2>
+        </div>
+        <div class="prose">
+          <p>
+            b-velop steht für Frontend-Entwicklung mit Handwerk und Haltung. Ich helfe Unternehmen,
+            große Webanwendungen in Microfrontends zu schneiden, die Teams eigenständig entwickeln und ausliefern können,
+            und verbinde sie über schlanke BFF-Schichten mit den Systemen dahinter.
+          </p>
+          <p>
+            Ich arbeite als Verstärkung im bestehenden Team oder eigenverantwortlich, von der Architektur
+            bis zum Deployment. Mir sind klare Kommunikation, nachvollziehbarer Code und pragmatische
+            Entscheidungen wichtig, damit Ihre Anwendung auch in ein paar Jahren noch gut wartbar ist.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leistungen -->
+    <section class="section section-alt" id="leistungen">
+      <div class="container">
+        <h2 class="section-title"><span>{</span> Leistungen <span>}</span></h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Microfrontends</h3>
+            <p>Architektur und Umsetzung von Microfrontends, damit Teams unabhängig entwickeln und ausliefern.</p>
+          </article>
+          <article class="card">
+            <h3>UI mit Vue &amp; React</h3>
+            <p>Moderne, wartbare Oberflächen in TypeScript, sauber strukturiert und gut getestet.</p>
+          </article>
+          <article class="card">
+            <h3>Backend for Frontend</h3>
+            <p>BFF-Schichten mit ASP.NET Core, die genau die Daten liefern, die die Oberfläche braucht.</p>
+          </article>
+          <article class="card">
+            <h3>Beratung &amp; Delivery</h3>
+            <p>Architekturberatung, CI/CD mit Azure DevOps und Docker, damit Software zuverlässig beim Nutzer ankommt.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section" id="skills">
+      <div class="container">
+        <h2 class="section-title"><span>{</span> Skills <span>}</span></h2>
+        <div class="skill-groups">
+          <div class="skill-group">
+            <h3>Frontend &amp; Microfrontends</h3>
+            <ul class="tags">
+              <li>Microfrontends</li><li>Vue.js</li><li>React</li><li>TypeScript</li><li>Webentwicklung</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>BFF &amp; Backend</h3>
+            <ul class="tags">
+              <li>Backend for Frontend</li><li>C#</li><li>ASP.NET Core</li><li>Microservices</li><li>SQL</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Delivery</h3>
+            <ul class="tags">
+              <li>CI/CD</li><li>Azure DevOps</li><li>Docker</li><li>Testing</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Referenz -->
+    <section class="section section-alt" id="referenz">
+      <div class="container">
+        <h2 class="section-title"><span>{</span> Referenz <span>}</span></h2>
+        <article class="ref-card">
+          <div class="ref-head">
+            <p class="ref-meta">CRM-System · Kunde auf Wunsch anonym</p>
+            <h3>Neuentwicklung eines CRM-Systems mit Umstieg auf Microfrontends</h3>
+            <p>
+              Neuentwicklung eines CRM-Systems von Grund auf. Im weiteren Verlauf habe ich die Oberfläche
+              von Aurelia auf Vue.js migriert und die Architektur auf Microfrontends umgestellt, sodass
+              einzelne Bereiche unabhängig weiterentwickelt und ausgeliefert werden können.
+            </p>
+          </div>
+          <ol class="ref-phases">
+            <li><span class="step-no">01</span><div><h4>Neuentwicklung</h4><p>Aufbau des CRM-Systems</p></div></li>
+            <li><span class="step-no">02</span><div><h4>Migration</h4><p>Von Aurelia auf Vue.js</p></div></li>
+            <li><span class="step-no">03</span><div><h4>Architektur</h4><p>Umstellung auf Microfrontends</p></div></li>
+          </ol>
+          <ul class="tags">
+            <li>Vue.js</li><li>Aurelia</li><li>Microfrontends</li><li>TypeScript</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Arbeitsweise -->
+    <section class="section" id="ablauf">
+      <div class="container">
+        <h2 class="section-title"><span>{</span> So arbeiten wir zusammen <span>}</span></h2>
+        <ol class="steps">
+          <li><span class="step-no">10</span><div><h3>Kennenlernen</h3><p>Wir sprechen über Ihr Vorhaben, Ziele und Rahmenbedingungen.</p></div></li>
+          <li><span class="step-no">20</span><div><h3>Konzept</h3><p>Ich schlage einen technischen Weg vor, mit realistischem Umfang.</p></div></li>
+          <li><span class="step-no">30</span><div><h3>Umsetzung</h3><p>Iterativ, transparent und mit regelmäßigen Zwischenständen.</p></div></li>
+          <li><span class="step-no">40</span><div><h3>Betrieb</h3><p>Übergabe, Dokumentation und auf Wunsch weitere Betreuung.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section class="section contact" id="kontakt">
+      <div class="container contact-inner">
+        <h2 class="section-title"><span>{</span> Kontakt <span>}</span></h2>
+        <p class="lead">Sie haben ein Projekt oder suchen Verstärkung für Ihr Team? Ich freue mich auf Ihre Nachricht.</p>
+        <address class="contact-card">
+          <strong>Marcel Benders</strong><br>
+          Scheiblerstraße 111<br>
+          47800 Krefeld<br><br>
+          <a href="mailto:marcel.benders@b-velop.com">marcel.benders@b-velop.com</a><br>
+          <a href="tel:+4915202394104">+49 152 02 394 104</a>
+        </address>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="mailto:marcel.benders@b-velop.com">E-Mail schreiben</a>
+          <a class="btn btn-ghost" href="https://github.com/Marcel-B" rel="noopener" target="_blank">GitHub</a>
+          <a class="btn btn-ghost" href="https://mastodon.social/@marcel_be" rel="me noopener" target="_blank">Mastodon</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> <b>&lt;/&gt;</b> b-velop</p>
+      <nav aria-label="Rechtliches">
+        <a href="https://github.com/Marcel-B" rel="noopener" target="_blank">GitHub</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
