@@ -1,15 +1,16 @@
-/* b-velop – Farben angelehnt an den Commodore 64 */
+/* b-velop – C64-Blau wie auf der bisherigen Seite */
 :root {
-  --c64-blue: #40318D;        /* C64 Hintergrundblau */
-  --c64-light: #7869C4;       /* C64 Hellblau (Rahmen/Schrift) */
-  --c64-pale: #A59BE6;
-  --bg: #F6F5FC;
-  --bg-alt: #ECEAF8;
+  --c64-blue: #557AE3;        /* Hauptblau der alten Seite */
+  --c64-light: #5F85FD;       /* Akzentlinien */
+  --c64-pale: #E3EAFD;        /* helle Schrift auf Blau */
+  --c64-deep: #3A5BC4;        /* dunkleres Blau für Footer */
+  --bg: #F3F5F9;
+  --bg-alt: #E6EAF1;
   --surface: #FFFFFF;
-  --text: #1D1838;
-  --muted: #5B5680;
-  --border: #DAD6F0;
-  --accent: var(--c64-blue);
+  --text: #1B2233;
+  --muted: #55607A;
+  --border: #D2D7DF;
+  --accent: #3A5BC4;
   --on-accent: #FFFFFF;
   --mono: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
   --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -18,12 +19,12 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #15112E;
-    --bg-alt: #1C1740;
-    --surface: #231D4D;
-    --text: #ECEAFB;
-    --muted: #ABA5D6;
-    --border: #352C6E;
+    --bg: #11162A;
+    --bg-alt: #161D36;
+    --surface: #1C2442;
+    --text: #E8ECF7;
+    --muted: #A3ADC8;
+    --border: #2C3760;
     --accent: var(--c64-light);
     --on-accent: #FFFFFF;
   }
@@ -50,7 +51,7 @@ a { color: inherit; }
   position: sticky; top: 0; z-index: 10;
   background: var(--c64-blue);
   color: var(--c64-pale);
-  border-bottom: 4px solid var(--c64-light);
+  border-bottom: 1px solid rgba(255,255,255,.35);
 }
 .header-inner {
   display: flex; align-items: center; justify-content: space-between;
@@ -59,8 +60,13 @@ a { color: inherit; }
 .nav { display: flex; gap: 24px; flex-wrap: wrap; font-family: var(--mono); font-size: 15px; }
 .nav a { text-decoration: none; color: var(--c64-pale); text-transform: uppercase; letter-spacing: .06em; }
 .nav a:hover, .nav a:focus-visible { color: #fff; }
-.brand { color: var(--c64-pale); flex-shrink: 0; }
-.brand-logo { width: 64px; height: 64px; }
+.brand { display: flex; flex-direction: column; align-items: flex-end; text-decoration: none; flex-shrink: 0; padding: 10px 0; }
+.brand-name {
+  font-size: 2rem; font-weight: 700; line-height: 1.1; letter-spacing: -.01em;
+  color: #141B2E; padding: 0 2px 4px; border-bottom: 1px solid rgba(255,255,255,.75); align-self: stretch; text-align: right;
+}
+.brand-sub { font-size: .85rem; color: var(--c64-pale); margin-top: 4px; white-space: nowrap; }
+.brand-sub b, .site-footer b { font-family: var(--mono); color: #fff; font-weight: 700; }
 
 /* Hero */
 .hero {
@@ -100,10 +106,10 @@ h1 {
   transition: transform .15s ease, background .15s ease;
 }
 .btn:hover { transform: translateY(-2px); }
-.btn-primary { background: var(--c64-light); color: #fff; }
-.btn-primary:hover { background: #8a7cd6; }
-.btn-ghost { border-color: var(--c64-light); color: var(--c64-pale); }
-.btn-ghost:hover { background: rgba(120,105,196,.18); }
+.btn-primary { background: #fff; color: #2D4AA8; }
+.btn-primary:hover { background: var(--c64-pale); }
+.btn-ghost { border-color: rgba(255,255,255,.7); color: #fff; }
+.btn-ghost:hover { background: rgba(255,255,255,.12); }
 
 /* Sections */
 .section { padding: 88px 0; }
@@ -120,14 +126,14 @@ h1 {
 
 /* Cards */
 .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
-.card, .ref {
+.card {
   background: var(--surface); border: 1px solid var(--border);
   border-radius: var(--radius); padding: 28px;
   transition: border-color .2s ease, transform .2s ease;
 }
-.card:hover, .ref:hover { border-color: var(--accent); transform: translateY(-3px); }
-.card h3, .ref h3 { margin: 0 0 8px; font-size: 1.15rem; }
-.card p, .ref p { margin: 0; color: var(--muted); }
+.card:hover { border-color: var(--accent); transform: translateY(-3px); }
+.card h3 { margin: 0 0 8px; font-size: 1.15rem; }
+.card p { margin: 0; color: var(--muted); }
 .card h3::before { content: "> "; font-family: var(--mono); color: var(--accent); }
 
 /* Skills */
@@ -144,12 +150,6 @@ h1 {
   color: var(--text);
   border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
 }
-.tags-small { margin-top: 16px; }
-.tags-small li { font-size: .78rem; padding: 3px 9px; }
-
-/* Referenzen */
-.refs { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-.ref-meta { font-family: var(--mono); font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; color: var(--accent) !important; margin-bottom: 8px !important; }
 
 /* Ablauf */
 .steps { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 28px; }
@@ -163,10 +163,20 @@ h1 {
 .contact .section-title span { color: var(--c64-pale); }
 .contact-inner { text-align: center; }
 .contact-inner .lead { margin-inline: auto; }
+.contact-card { font-style: normal; margin: 28px auto 0; line-height: 1.7; }
+.contact-card a { color: #fff; }
+
+/* Rechtliche Seiten */
+.legal { padding: 64px 0 88px; }
+.legal .container { max-width: 760px; }
+.legal h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); }
+.legal h2 { font-size: 1.2rem; margin: 2em 0 .4em; }
+.legal p, .legal address { font-style: normal; color: var(--muted); margin: 0 0 1em; }
+.legal a { color: var(--accent); }
 .contact .hero-actions { justify-content: center; }
 
 /* Footer */
-.site-footer { background: #2A1F66; color: var(--c64-pale); font-size: .9rem; border-top: 4px solid var(--c64-light); }
+.site-footer { background: var(--c64-deep); color: var(--c64-pale); font-size: .9rem;  }
 .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; padding: 24px 0; }
 .footer-inner p { margin: 0; }
 .footer-inner nav { display: flex; gap: 20px; }
@@ -176,7 +186,10 @@ h1 {
 @media (max-width: 720px) {
   .header-inner { min-height: 72px; }
   .nav { gap: 14px; font-size: 13px; }
-  .brand-logo { width: 52px; height: 52px; }
+  .header-inner { flex-direction: column-reverse; align-items: stretch; gap: 4px; padding-bottom: 10px; }
+  .brand-name { font-size: 1.6rem; }
+  .brand-sub { font-size: .75rem; }
+  .nav { justify-content: flex-start; }
   .split { grid-template-columns: 1fr; gap: 0; }
   .hero { padding: 64px 0 80px; }
   .section { padding: 64px 0; }
