@@ -32,6 +32,11 @@ jobs:
           LFTP_PASSWORD: ${{ secrets.STRATO_SFTP_PASSWORD }}
           REMOTE_DIR: ${{ secrets.STRATO_REMOTE_DIR }}
         run: |
+          # Leerzeichen und Zeilenumbrüche aus eingefügten Secrets entfernen
+          SFTP_HOST="$(printf '%s' "$SFTP_HOST" | tr -d '[:space:]')"
+          SFTP_USER="$(printf '%s' "$SFTP_USER" | tr -d '[:space:]')"
+          REMOTE_DIR="$(printf '%s' "$REMOTE_DIR" | tr -d '\r\n')"
+          export LFTP_PASSWORD="$(printf '%s' "$LFTP_PASSWORD" | tr -d '\r\n')"
           lftp -e "
             set sftp:auto-confirm no;
             set net:max-retries 2;
