@@ -41,13 +41,13 @@ jobs:
             set sftp:auto-confirm no;
             set net:max-retries 2;
             set net:timeout 30;
-            open --env-password -u \"$SFTP_USER\" sftp://$SFTP_HOST;
+            open --env-password -u $SFTP_USER sftp://$SFTP_HOST;
             mirror --reverse --verbose --parallel=4 \
               --exclude-glob .git/ \
               --exclude-glob .github/ \
               --exclude-glob .vscode/ \
               --exclude-glob .gitignore \
               --exclude-glob README.md \
-              . \"${REMOTE_DIR:-/}\";
+              . ${REMOTE_DIR:-/};
             bye
           "
